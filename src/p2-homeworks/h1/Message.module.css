@@ -38,8 +38,6 @@ img {
     font-size: 50px;
     margin: auto auto auto 40px;
     display: grid;
-    align-items: center;
-    justify-items: start;
 }
 
 .name {
@@ -53,6 +51,6 @@ img {
 .time {
     grid-area: time;
     color: rgb(49, 66, 41);
-    font-size: 70px;
-    margin: auto 10px 10px auto;
+    font-size: 60px;
+    margin: auto 40px 10px auto;
 }
