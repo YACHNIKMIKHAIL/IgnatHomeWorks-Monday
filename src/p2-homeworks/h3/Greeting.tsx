@@ -20,7 +20,6 @@ const Greeting: React.FC<GreetingPropsType> = (
         <div>
             <input value={name} onChange={setNameCallback} className={inputClass}
                    onKeyPress={(e) => {
-                       console.log(e.charCode)
                    }}/>
             <span>{error}</span>
             <button onClick={addUser}>add</button>

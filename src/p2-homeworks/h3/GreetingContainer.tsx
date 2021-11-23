@@ -16,7 +16,6 @@ type GreetingContainerPropsType = {
 export const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
     const [name, setName] = useState<string>('')
     const [error, setError] = useState<string>('')
-    console.log(users)
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.currentTarget.value.trim()) {
             setError('')
@@ -31,6 +30,7 @@ export const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, 
         }
         addUserCallback(name)
         alert(`Hello ${name} !`)
+        setName('')
     }
 
     const totalUsers = users.length
