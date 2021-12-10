@@ -1,4 +1,8 @@
 .checkbox {
+    /*display: inline-flex;*/
+    /*align-items: center;*/
+    /*user-select: none;*/
+
     display: inline-block;
     color: black;
     padding: 20px 30px;
@@ -6,6 +10,7 @@
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
 }
+
 
 .spanClassName {
     opacity: 0.4;
