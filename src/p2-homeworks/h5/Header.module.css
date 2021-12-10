@@ -1,4 +1,4 @@
-.slide{
+.slide {
     position: relative;
     left: -330px;
     width: 400px;
@@ -13,5 +13,10 @@
 
 div:hover {
     left: 0px;
+}
 
+.active {
+    background-color: #9eefe1;
+    padding: 10px;
+    color: darkmagenta;
 }
