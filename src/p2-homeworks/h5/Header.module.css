@@ -1,11 +1,14 @@
 .slide{
     position: relative;
-    left: -70px;
-    width: 100px;
+    left: -330px;
+    width: 400px;
     height: 50px;
-    background: #000;
+    /*background: #000;*/
     margin-top: 5px;
     transition: left .2s linear;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 div:hover {
