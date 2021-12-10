@@ -2,7 +2,7 @@ import React from 'react'
 import {PATH} from "./Routes";
 import {NavLink} from "react-router-dom";
 import s from './Header.module.css'
-import JUNIORplus from "./pages/JUNIORplus";
+
 
 function Header() {
     return (
