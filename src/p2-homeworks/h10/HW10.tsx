@@ -7,7 +7,7 @@ import {CircularProgress} from "@mui/material";
 
 function HW10() {
     // useSelector, useDispatch
-    const loading = useSelector<AppStoreType,boolean>(state => state.loading.loading)
+    const loading = useSelector<AppStoreType, boolean>(state => state.loading.loading)
     const dispatch = useDispatch<Dispatch<LoadingACType>>()
     // const loading = false
 
@@ -29,7 +29,8 @@ function HW10() {
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div><CircularProgress /></div>
+                    <div style={{display: 'flex', width: '100%', justifyContent: 'space-around'}}><CircularProgress/>
+                    </div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
