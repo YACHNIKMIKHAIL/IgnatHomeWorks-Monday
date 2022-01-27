@@ -1,4 +1,3 @@
-export type ColorType = 'white' | 'red' | 'blue' | 'purple' | 'gray' | 'pink'
 export type initStateColorType = {
     color: string
 }
@@ -20,6 +19,6 @@ type ActionType = changeThemeCType
 
 type changeThemeCType = ReturnType<typeof changeThemeC>
 const CHANGE_COLOR = 'CHANGE_COLOR'
-export const changeThemeC = (color: ColorType): { type: string, color: ColorType } => {
+export const changeThemeC = (color: string): { type: string, color: string } => {
     return {type: CHANGE_COLOR, color} as const
 }; // fix any
