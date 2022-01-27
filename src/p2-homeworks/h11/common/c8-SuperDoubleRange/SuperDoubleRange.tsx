@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React, {useEffect} from 'react'
 import {Box, Slider} from "@mui/material";
 
 type SuperDoubleRangePropsType = {
@@ -7,37 +7,23 @@ type SuperDoubleRangePropsType = {
 }
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-         onChangeRange, value,
+        onChangeRange, value,
 
     }
 ) => {
-    //
-    // const [valueX, setValueX] = React.useState<number[]>([20, 37]);
-    //
-    // // const onChangeCallback = (e: ChangeEvent<HTMLInputElement>, newValue: number[]) => {
-    // //     setValueX(newValue)
-    // //     if (onChangeRange) {
-    // //         onChangeRange(newValue);
-    // //     }
-    // // }
-    // const handleChange = (event: Event, newValue: number | number[]) => {
-    //     if (onChangeRange) {
-    //         if (typeof newValue === 'number')
-    //             setValueX([newValue, 0])
-    //         onChangeRange(valueX);
-    //     }
-    // };
-    const start=()=>{
+
+    const [value2, setValue2] = React.useState<Array<number>>([0, 100]);
+
+    useEffect(()=>{
         debugger
-        if(value){
-            return value
-        }else{
-            return [1,50]
+        if(value) {
+            setValue2(value)
         }
-    }
-    const [value2, setValue2] = React.useState<Array<number>>(start());
+    },[value])
+
     const minDistance = 10;
     console.log(value2)
+
     const handleChange2 = (
         event: Event,
         newValue: number | number[],
@@ -46,7 +32,6 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         if (!Array.isArray(newValue)) {
             return;
         }
-
         if (newValue[1] - newValue[0] < minDistance) {
             if (activeThumb === 0) {
                 const clamped = Math.min(newValue[0], 100 - minDistance);
@@ -56,7 +41,10 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                 setValue2([clamped - minDistance, clamped]);
             }
         } else {
-            setValue2(newValue as number[]);
+            if (onChangeRange) {
+                onChangeRange(newValue)
+            }
+            setValue2(newValue as number[])
         }
     };
 
@@ -67,7 +55,6 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                 value={value2}
                 onChange={handleChange2}
                 valueLabelDisplay="auto"
-                // getAriaValueText={valuetext}
                 disableSwap
             />
         </Box>

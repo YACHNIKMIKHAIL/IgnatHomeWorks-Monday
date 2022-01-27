@@ -3,18 +3,14 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
-    const [value1, setValue1] = useState<number>(0)
-    const [value2, setValue2] = useState<number>(100)
-    const [allV,setAllV]=useState<Array<number>>([value1,value2])
+    const [allV,setAllV]=useState<Array<number>>([0,100])
 
     const onChangeRange = (value: number) => {
-       debugger
-        console.log(allV)
-        setAllV([value,value2])
+        setAllV([value,allV[1]])
     }
     const onChangeRangeII = (value: Array<number>) => {
-        setValue1(value[0])
-        setValue2(value[1])
+        debugger
+        setAllV(value)
     }
 
     return (
@@ -22,14 +18,14 @@ function HW11() {
             <hr/>
             homeworks 11
             <div>
-                <span>{value1}</span>
-                <SuperRange onChangeRange={onChangeRange} value={value1}/>
+                <div>{allV[0]}</div>
+                <SuperRange onChangeRange={onChangeRange} value={allV[0]}/>
             </div>
 
             <div>
-                <span>{value1}</span>
+                <div>{allV[0]}</div>
                 <SuperDoubleRange onChangeRange={onChangeRangeII} value={allV}/>
-                <span>{value2}</span>
+                <div>{allV[1]}</div>
             </div>
 
             <hr/>
