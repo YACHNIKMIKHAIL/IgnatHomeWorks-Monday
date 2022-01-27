@@ -27,8 +27,17 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     //         onChangeRange(valueX);
     //     }
     // };
-    const [value2, setValue2] = React.useState<number[]>([20, 37]);
+    const start=()=>{
+        debugger
+        if(value){
+            return value
+        }else{
+            return [1,50]
+        }
+    }
+    const [value2, setValue2] = React.useState<Array<number>>(start());
     const minDistance = 10;
+    console.log(value2)
     const handleChange2 = (
         event: Event,
         newValue: number | number[],
