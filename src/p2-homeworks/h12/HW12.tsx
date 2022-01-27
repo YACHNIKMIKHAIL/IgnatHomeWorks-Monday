@@ -21,7 +21,7 @@ function HW12() {
                 homeworks 12
             </span>
             <SuperSelect
-                options={['white', 'red', 'blue', 'purple', 'gray', 'pink', 'red']}
+                options={['hotpink', 'white', 'red', 'blue', 'purple', 'gray', 'red']}
                 onChangeOption={onChangeCallback}
             />
             {/*should work (должно работать)*/}

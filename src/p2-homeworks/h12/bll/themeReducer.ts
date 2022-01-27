@@ -2,13 +2,13 @@ export type initStateColorType = {
     color: string
 }
 const initState: initStateColorType = {
-    color: 'white'
+    color: 'hotpink'
 };
 
 export const themeReducer = (state = initState, action: ActionType): initStateColorType => { // fix any
     switch (action.type) {
         case CHANGE_COLOR: {
-            return {...state,color:action.color};
+            return {...state, color: action.color};
         }
         default:
             return state;
