@@ -6,7 +6,7 @@ const Hw13 = () => {
         <div>
             <Request/>
         </div>
-);
+    );
 };
 
 export default Hw13;

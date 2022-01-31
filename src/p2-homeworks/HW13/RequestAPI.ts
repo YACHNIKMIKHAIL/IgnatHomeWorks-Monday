@@ -7,6 +7,6 @@ export const RequestAPI = {
                 console.log(res.data)
                 return res.data
             })
-            .catch(e => alert(e + ' Игнат не хочет видеть {success: false} =)'))
+            .catch(e => alert(e.response.data.errorText))
     }
 }
