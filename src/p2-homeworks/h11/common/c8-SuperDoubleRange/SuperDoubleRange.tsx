@@ -22,7 +22,6 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     },[value])
 
     const minDistance = 10;
-    console.log(value2)
 
     const handleChange2 = (
         event: Event,

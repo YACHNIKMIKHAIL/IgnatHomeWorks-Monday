@@ -1,5 +1,6 @@
 import React from 'react'
 import HW12 from "../../h12/HW12";
+import HW13 from '../../HW13/HW13';
 
 
 function JUNIORplus() {
@@ -7,6 +8,7 @@ function JUNIORplus() {
         <div>
             JUNIORplus
             <HW12/>
+            <HW13/>
         </div>
     )
 }
